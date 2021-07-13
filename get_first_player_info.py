@@ -1,10 +1,11 @@
 from urllib.parse import parse_qsl
-from flask import Flask,jsonify,request,render_template,redirect
+from flask import Flask,jsonify,request,render_template,redirect,session
 from requests_oauthlib import OAuth1Session
 import secret
 from player_info_db_handler import player_info_db_handler
 
 app=Flask(__name__)
+app.secret_key = 'A0Zr98j/3yX Rnaxaixaixai~XHH!jmN]LWX/,?RT'
 
 base_url="https://api.twitter.com/"
 
@@ -17,8 +18,9 @@ def index():
     return render_template("index.html")
 
 @app.route('/scoresaber_register',methods=['GET'])
-def index():
+def register_scoresaber():
     return render_template("index2.html")
+    session["url"]=function()
 
 @app.route('/twitter/request_token',methods=['GET'])
 def get_twitter_request_token():
@@ -63,8 +65,11 @@ def get_twitter_access_token():
 
      access_token=dict(parse_qsl(response.content.decode("utf-8")))
 
+     session["oauth_token"]=access_token["oauth_token"]
+     session["oauth_token_secret"]=access_token["oauth_token_secret"]
+
      player_info_db=player_info_db_handler()
-     player_info_db.tokens_info_insert(access_token["oauth_token"],access_token["oauth_token_secret"])
+     player_info_db.player_info_insert(session["url"],access_token["oauth_token"],access_token["oauth_token_secret"])
 
      return render_template("index3.html")
 
