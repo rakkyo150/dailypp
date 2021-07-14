@@ -18,3 +18,6 @@ class player_info_db_handler:
     def player_info_export(self):
         cur.execute('SELECT * from playerInfo')
         return cur.fetchall()
+
+        conn.commit()
+        conn.close()
