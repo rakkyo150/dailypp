@@ -1,10 +1,12 @@
-from bs4 import BeautifulSoup
-import requests
 import re
 from datetime import datetime
 
+import requests
+from bs4 import BeautifulSoup
+
+
 class scraping:
-    def __init__(self,link):
+    def __init__(self, link):
         global soup, soup_recent
         html_doc = requests.get(link).text
         html_doc_recent = requests.get(link + "&sort=2").text
