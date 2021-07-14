@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626284189301</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了">
+      <created>1626293456026</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1626293456026</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -337,16 +344,7 @@
     <MESSAGE value="クリーンアップ" />
     <MESSAGE value="セッションの最適化とセッションキーを変更・隠匿" />
     <MESSAGE value="バグの修正とシークレットキーを環境変数へ設定" />
-    <option name="LAST_COMMIT_MESSAGE" value="バグの修正とシークレットキーを環境変数へ設定" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/send_tweet.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了" />
+    <option name="LAST_COMMIT_MESSAGE" value="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了" />
   </component>
 </project>

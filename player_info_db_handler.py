@@ -20,5 +20,9 @@ class player_info_db_handler:
         cur.execute('SELECT * from playerInfo')
         return cur.fetchall()
 
+    def player_info_delete(self,oauth_token):
+        cur.execute('DELETE FROM playerInfo WHERE oauth_token=?',(oauth_token,))
+
+    def player_info_db_connection_close(self):
         conn.commit()
         conn.close()
