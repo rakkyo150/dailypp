@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_player_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_player_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +42,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="release/prepare_for_heroku_deploy" />
+                    <option name="lastUsedInstant" value="1626279842" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="develop" />
                     <option name="lastUsedInstant" value="1626138532" />
                   </RecentBranch>
@@ -61,7 +64,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/secret.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1vCqpQJfcuiD4hYGBPmItgZcFnF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -89,6 +91,9 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
+        <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
+        <env name="session_key" value="x2iJWhYqout7rCoMKUv70l7LnDS7GvpUh6e2BO7tOR84MnKXd7xNE2icHFnXW" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -110,6 +115,9 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
+        <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
+        <env name="session_key" value="x2iJWhYqout7rCoMKUv70l7LnDS7GvpUh6e2BO7tOR84MnKXd7xNE2icHFnXW" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -244,7 +252,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626255790144</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="セッションの最適化とセッションキーを変更・隠匿">
+      <created>1626279722617</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1626279722617</updated>
+    </task>
+    <task id="LOCAL-00017" summary="バグの修正とシークレットキーを環境変数へ設定">
+      <created>1626284189301</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1626284189301</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -313,6 +335,18 @@
     <MESSAGE value="tweepy実装" />
     <MESSAGE value="結合を疎にした" />
     <MESSAGE value="クリーンアップ" />
-    <option name="LAST_COMMIT_MESSAGE" value="クリーンアップ" />
+    <MESSAGE value="セッションの最適化とセッションキーを変更・隠匿" />
+    <MESSAGE value="バグの修正とシークレットキーを環境変数へ設定" />
+    <option name="LAST_COMMIT_MESSAGE" value="バグの修正とシークレットキーを環境変数へ設定" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/send_tweet.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
