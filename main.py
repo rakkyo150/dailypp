@@ -19,6 +19,7 @@ player_info_list = player_info_db.player_info_export()
 # 登録人数分繰り返し
 for url, token, token_secret in player_info_list:
     scoreSaber_link = "https://scoresaber.com/u/" + url
+    print(token,token_secret)
 
     '''スクレイピング開始'''
 
