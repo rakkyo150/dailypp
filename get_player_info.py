@@ -83,9 +83,9 @@ def get_twitter_access_token():
 
     player_info_db = player_info_db_handler()
     player_info_db.player_info_insert(
-        session.pop["url",None],
-        access_token.pop["oauth_token",None],
-        access_token.pop["oauth_token_secret",None]
+        session["url"],
+        session["oauth_token"],
+        session["oauth_token_secret"]
     )
 
     return render_template("index4.html")
