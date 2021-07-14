@@ -19,6 +19,7 @@ player_info_list = player_info_db.player_info_export()
 # 登録人数分繰り返し
 for url, token, token_secret in player_info_list:
     scoreSaber_link = "https://scoresaber.com/u/" + url
+    print(token)
 
     '''スクレイピング開始'''
 
@@ -50,7 +51,6 @@ for url, token, token_secret in player_info_list:
     today_data.append(scraping.recent_play_UTC())
 
     print(today_data)
-    print(type(today_data[0]))
 
     '''スクレイピング終了'''
 
