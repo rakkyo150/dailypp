@@ -1,37 +1,42 @@
 <!doctype html>
 <html lang="jp">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" rel="stylesheet">
 
     <title>スコアセイバーのURLの確認</title>
-  </head>
-  <body>
-    <h2 class="text-center">スコアセイバーのURLに間違いはありませんか？</h2>
-    <div class="m-4">
-      <h4 class="text-center">https://scoresaber.com/u/{{verification}}</h4>
-    </div>
-    <div class="container">
-      <div class="row">
+</head>
+<body>
+<h2 class="text-center">スコアセイバーのURLに間違いはありませんか？</h2>
+<div class="m-4">
+    <h4 class="text-center">https://scoresaber.com/u/{{verification}}</h4>
+</div>
+<div class="container">
+    <div class="row">
         <div class="col-3"></div>
         <div class="col-3">
-          <div class="text-center">
-            <a href="/twitter/request_token"><button class="text-primary">はい</button></a>
-            <p class="text-muted">Twitter連携画面へ進む</p>
-          </div>
+            <div class="text-center">
+                <a href="/twitter/request_token">
+                    <button class="text-primary">はい</button>
+                </a>
+                <p class="text-muted">Twitter連携画面へ進む</p>
+            </div>
         </div>
         <div class="col-3">
-          <div class="text-center">
-            <a href="/scoresaber_register_form"><button class="text-danger">いいえ</button></a>
-            <p class="text-muted">スコアセイバーのURL入力画面へ戻る</p>
-          </div>
+            <div class="text-center">
+                <a href="/scoresaber_register_form">
+                    <button class="text-danger">いいえ</button>
+                </a>
+                <p class="text-muted">スコアセイバーのURL入力画面へ戻る</p>
+            </div>
         </div>
         <div class="col-3"></div>
-      </div>
     </div>
-  </body>
+</div>
+</body>
 </html>

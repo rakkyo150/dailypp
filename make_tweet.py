@@ -1,41 +1,47 @@
-from decimal import *
-import unicodedata
 from datetime import datetime
+from decimal import *
 
-string_count=0;
-tweet_sentence=""
+import unicodedata
 
-def decimalCalculation(float1,float2):
-    result=Decimal(str(float1))-Decimal(str(float2))
+string_count = 0;
+tweet_sentence = ""
+
+
+def decimalCalculation(float1, float2):
+    result = Decimal(str(float1)) - Decimal(str(float2))
     return result
 
+
 def stringCount(text):
-    count=0
+    count = 0
     for c in text:
         if unicodedata.east_asian_width(c) in "FWA":
-            count+=2
+            count += 2
         else:
-            count+=1
+            count += 1
     return count
 
+
 def ry(count):
-    if count>=280:
+    if count >= 280:
         return True
     else:
         return False
 
+
 def addText(text):
     # これをしないとローカル変数とみなされ関数内の変更が反映されない
-    global string_count,tweet_sentence
-    if string_count==0:
-        string_count+=stringCount(text)
+    global string_count, tweet_sentence
+    if string_count == 0:
+        string_count += stringCount(text)
     else:
-        string_count+=stringCount(text)+1
+        string_count += stringCount(text) + 1
     if not ry(string_count):
         print(text)
-        tweet_sentence+=text+"\n"
+        tweet_sentence += text + "\n"
 
-def make_tweet(yesterday_data,today_data):
+
+def make_tweet(yesterday_data, today_data):
     addText(today_data[0])
 
     if ry(string_count):

@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="tweepy実装">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="結合を疎にした">
+      <change beforePath="$PROJECT_DIR$/get_player_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_player_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_tweet.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_tweet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_history_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_history_db_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_info_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_info_db_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/send_tweet.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_tweet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index4.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +232,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626248282156</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="結合を疎にした">
+      <created>1626255398293</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626255398293</updated>
+    </task>
+    <task id="LOCAL-00014" summary="結合を疎にした">
+      <created>1626255425718</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626255425718</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -291,6 +313,7 @@
     <MESSAGE value="HTMLとJS" />
     <MESSAGE value="プレイヤーインフォの完成とHTMLの完成" />
     <MESSAGE value="tweepy実装" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweepy実装" />
+    <MESSAGE value="結合を疎にした" />
+    <option name="LAST_COMMIT_MESSAGE" value="結合を疎にした" />
   </component>
 </project>
