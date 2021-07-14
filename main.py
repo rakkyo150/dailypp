@@ -1,7 +1,7 @@
 from datetime import datetime
 
-import make_tweet
-import send_tweet
+from make_tweet import make_tweet
+from twitter_handler import twitter_handler
 from player_history_db_handler import player_history_db_handler
 from player_info_db_handler import player_info_db_handler
 from scraping import scraping
@@ -21,49 +21,61 @@ for url, token, token_secret in player_info_list:
     scoreSaber_link = "https://scoresaber.com/u/" + url
     print(token)
 
-    '''スクレイピング開始'''
+    # 連携が切れたならデータベースのデータを削除
+    twitter_handler_api=twitter_handler(token,token_secret)
+    if twitter_handler_api.verify_credentials() is False:
+        print("false")
+        player_info_db.player_info_delete(token)
+        player_history_db.player_history_delete(token)
+    else:
+        print("true")
 
-    # スクレイピング・解析
-    scraping = scraping(scoreSaber_link)
+        '''スクレイピング開始'''
 
-    # 0=name,1=pp,2=global_ranking,3=local_ranking,4=topSong,5=tpoPP,6=recent_play_UTC
-    today_data = []
+        # スクレイピング・解析
+        scraping = scraping(scoreSaber_link)
 
-    # 名前のスクレイピング
-    today_data.append(scraping.name())
+        # 0=name,1=pp,2=global_ranking,3=local_ranking,4=topSong,5=tpoPP,6=recent_play_UTC
+        today_data = []
 
-    # PPのスクレイピング
-    today_data.append(scraping.today_pp())
+        # 名前のスクレイピング
+        today_data.append(scraping.name())
 
-    # グローバルランキングのスクレイピング
-    today_data.append(scraping.global_ranking())
+        # PPのスクレイピング
+        today_data.append(scraping.today_pp())
 
-    # ローカルランキングのスクレイピング
-    today_data.append(scraping.local_ranking())
+        # グローバルランキングのスクレイピング
+        today_data.append(scraping.global_ranking())
 
-    # トップソングのスクレイピング
-    today_data.append(scraping.topSong())
+        # ローカルランキングのスクレイピング
+        today_data.append(scraping.local_ranking())
 
-    # トップソングのPPのスクレイピング
-    today_data.append(scraping.topPP())
+        # トップソングのスクレイピング
+        today_data.append(scraping.topSong())
 
-    # 最新のスコア送信のスクレイピング
-    today_data.append(scraping.recent_play_UTC())
+        # トップソングのPPのスクレイピング
+        today_data.append(scraping.topPP())
 
-    print(today_data)
+        # 最新のスコア送信のスクレイピング
+        today_data.append(scraping.recent_play_UTC())
 
-    '''スクレイピング終了'''
+        print(today_data)
 
-    # 名前が一致する昨日のデータ出力
-    yesterday_data = player_history_db.player_yesterday_data_export(today_data[0])
+        '''スクレイピング終了'''
 
-    # 最新のデータをデータベースに入力
-    player_history_db.player_today_data_import(today_data)
+        # 名前が一致する昨日のデータ出力
+        yesterday_data = player_history_db.player_yesterday_data_export(token,today_data[0])
 
-    how_long_not_play = datetime.now().replace(microsecond=0) - today_data[6]
+        # 最新のデータをデータベースに入力
+        player_history_db.player_today_data_import(token,today_data)
 
-    # ツイート作成
-    tweet_sentence = make_tweet.make_tweet(yesterday_data, today_data)
+        how_long_not_play = datetime.now().replace(microsecond=0) - today_data[6]
 
-    # ツイート
-    send_tweet.send_tweet(tweet_sentence, token, token_secret)
+        # ツイート作成
+        tweet_sentence = make_tweet(yesterday_data, today_data)
+
+        # ツイート
+        twitter_handler_api.send_tweet(tweet_sentence)
+
+player_info_db.player_info_db_connection_close()
+player_history_db.player_history_db_connection_close()
