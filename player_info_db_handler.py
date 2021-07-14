@@ -10,11 +10,11 @@ class player_info_db_handler:
 
 
     def player_info_insert(self,url,oauth_token,oauth_token_secret):
-        cur.execute('INSERT INTO playerInfo VALUES(?,?,?)',(rel,oauth_token,oauth_token_secret))
+        cur.execute('INSERT INTO playerInfo VALUES(?,?,?)',(url,oauth_token,oauth_token_secret))
 
         conn.commit()
         conn.close()
 
     def player_info_export(self):
-        cur.execute('SELECT * from tokenSets')
+        cur.execute('SELECT * from playerInfo')
         return cur.fetchall()
