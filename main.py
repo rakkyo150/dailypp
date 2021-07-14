@@ -10,7 +10,7 @@ from decimal import *
 
 from player_info_db_handler import player_info_db_handler
 import secret
-import twitter
+import tweepy
 
 
 string_count=0;
@@ -70,13 +70,11 @@ for url,token,token_secret in player_info_list:
 
 
     # ツイート権限付与
-    auth = twitter.OAuth(consumer_key=secret.consumer_key,
-                         consumer_secret=secret.consumer_secret,
-                         token=token,
-                         token_secret=token_secret)
-    tweet = twitter.Twitter(auth=auth)
+    auth = tweepy.OAuthHandler(secret.consumer_key,secret.consumer_secret,)
+    auth.set_access_token(token,token_secret)
+    api=tweepy.API(auth)
 
-    scoreSaber_link=url
+    scoreSaber_link="https://scoresaber.com/u/"+url
 
     '''スクレイピング開始'''
 
@@ -128,7 +126,8 @@ for url,token,token_secret in player_info_list:
     '''スクレイピング終了'''
 
     # 名前が一致するひとつ前のデータを選択・出力
-    cur.execute('SELECT max(date),pp,gRanking,lRanking,topSong,topPP from history where user=?', name)
+    cur.execute('SELECT max(date),pp,gRanking,lRanking,topSong,topPP from history where user=?', (name,))
+
     yesterday_data = cur.fetchone()
 
     #最新のデータをデータベースに入力
@@ -231,7 +230,7 @@ for url,token,token_secret in player_info_list:
     print(cur.fetchall())
 
     #ツイート
-    tweet.status.update(status=tweet_sentence)
+    api.update_status(tweet_sentence,wait_on_rate_limit=True)
 
 conn.commit()
 conn.close()
