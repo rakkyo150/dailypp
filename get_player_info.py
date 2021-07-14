@@ -7,7 +7,8 @@ import secret
 from player_info_db_handler import player_info_db_handler
 
 app = Flask(__name__)
-app.secret_key = 'A0Zr98j/3yX Rnaxaixaixai~XHH!jmN]LWX/,?RT'
+# ちゃんと変更しました
+app.secret_key = secret.session_key
 
 base_url = "https://api.twitter.com/"
 
@@ -81,8 +82,11 @@ def get_twitter_access_token():
     session["oauth_token_secret"] = access_token["oauth_token_secret"]
 
     player_info_db = player_info_db_handler()
-    player_info_db.player_info_insert(session["url"], access_token["oauth_token"], access_token["oauth_token_secret"])
-    print(session["url"], access_token["oauth_token"], access_token["oauth_token_secret"])
+    player_info_db.player_info_insert(
+        session.pop["url",None],
+        access_token.pop["oauth_token",None],
+        access_token.pop["oauth_token_secret",None]
+    )
 
     return render_template("index4.html")
 
