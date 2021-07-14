@@ -17,11 +17,16 @@ access_token_url=base_url+"oauth/access_token"
 def index():
     return render_template("index.html")
 
-@app.route('/scoresaber_register',methods=['GET'])
-def register_scoresaber():
+@app.route('/scoresaber_register_form',methods=['GET'])
+def register_form():
     return render_template("index2.html")
-    session["url"]=function()
 
+@app.route('/scoresaber_register_execute',methods=['POST'])
+def register_execute():
+    session["url"]=request.form["url"]
+    return render_template("index3.html",verification=session["url"])
+
+#twitterの連携確認画面作成
 @app.route('/twitter/request_token',methods=['GET'])
 def get_twitter_request_token():
 
@@ -46,6 +51,7 @@ def get_twitter_request_token():
 
     return redirect(request_token["authenticate_endpoint"])
 
+#連携後
 @app.route('/callback/twitter.html',methods=['GET'])
 def get_twitter_access_token():
      oauth_token=request.args.get("oauth_token")
@@ -70,8 +76,9 @@ def get_twitter_access_token():
 
      player_info_db=player_info_db_handler()
      player_info_db.player_info_insert(session["url"],access_token["oauth_token"],access_token["oauth_token_secret"])
+     print(session["url"],access_token["oauth_token"],access_token["oauth_token_secret"])
 
-     return render_template("index3.html")
+     return render_template("index4.html")
 
 
 if __name__=="__main__":
