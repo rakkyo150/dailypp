@@ -1,10 +1,8 @@
 import tweepy
 import os
 
-from player_info_db_handler import player_info_db_handler
-from player_history_db_handler import player_history_db_handler
 
-class twitter_handler:
+class Twitter_handler:
     def __init__(self,token, token_secret):
         global api
         auth = tweepy.OAuthHandler(os.environ['consumer_key'], os.environ['consumer_secret'], )

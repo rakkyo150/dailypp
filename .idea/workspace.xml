@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="データベース整理">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_history_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_history_db_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_player_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_player_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_history_db_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_info_db_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/twitter_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626296184708</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="データベース整理">
+      <created>1626312701652</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1626312701652</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -353,6 +366,7 @@
     <MESSAGE value="セッションの最適化とセッションキーを変更・隠匿" />
     <MESSAGE value="バグの修正とシークレットキーを環境変数へ設定" />
     <MESSAGE value="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了" />
-    <option name="LAST_COMMIT_MESSAGE" value="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了" />
+    <MESSAGE value="データベース整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="データベース整理" />
   </component>
 </project>

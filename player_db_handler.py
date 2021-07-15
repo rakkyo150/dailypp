@@ -1,0 +1,69 @@
+import sqlite3
+
+
+# scoresaberのURLもここで格納されます。
+class Player_db_handler:
+    def __init__(self):
+        global conn, cur
+        conn = sqlite3.connect("player.db")
+        cur = conn.cursor()
+        cur.execute(
+            'CREATE TABLE IF NOT EXISTS player_info(score_saber_url TEXT,oauth_token TEXT PRIMARY KEY,oauth_token_secret TEXT)'
+        )
+        cur.execute(
+            'CREATE TABLE IF NOT EXISTS player_history('
+            'oauth_token TEXT,'
+            'date TEXT,'
+            'user TEXT,'
+            'pp REAL,'
+            'gRanking INTEGER,'
+            'lRanking INTEGER,'
+            'topSong TEXT,'
+            'topPP INTEGER,'
+            'recent_play TEXT'
+            ')'
+        )
+
+    def player_info_insert(self, url, oauth_token, oauth_token_secret):
+        cur.execute(
+            'REPLACE INTO player_info VALUES(?,?,?)',
+            (url, oauth_token, oauth_token_secret)
+        )
+
+    def player_today_data_import(self, oauth_token, today_data):
+        cur.execute(
+            'INSERT INTO player_history VALUES (?,datetime("now","localtime"),?,?,?,?,?,?,?)', (
+                oauth_token,
+                today_data[0],
+                today_data[1],
+                today_data[2],
+                today_data[3],
+                today_data[4],
+                today_data[5],
+                today_data[6]
+            )
+        )
+
+    def player_info_export(self):
+        cur.execute('SELECT * from player_info')
+        return cur.fetchall()
+
+    def player_yesterday_data_export(self, oauth_token, name):
+        cur.execute(
+            'SELECT max(date),pp,gRanking,lRanking,topSong,topPP '
+            'FROM player_history '
+            'WHERE oauth_token=? AND user=?', (oauth_token, name)
+        )
+        yesterday_data = cur.fetchone()
+        cur.execute('DELETE FROM player_history WHERE oauth_token=? AND user=?', (oauth_token, name))
+        return yesterday_data
+
+    def player_info_delete(self, oauth_token):
+        cur.execute('DELETE FROM player_info WHERE oauth_token=?', (oauth_token,))
+
+    def player_history_delete(self, oauth_token):
+        cur.execute('DELETE FROM player_history WHERE oauth_token=?', (oauth_token,))
+
+    def player_db_connection_close(self):
+        conn.commit()
+        conn.close()
