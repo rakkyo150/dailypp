@@ -22,6 +22,7 @@ class player_history_db_handler:
     def player_yesterday_data_export(self, oauth_token,name):
         cur.execute('SELECT max(date),pp,gRanking,lRanking,topSong,topPP from history where oauth_token=? AND user=?', (oauth_token,name))
         yesterday_data = cur.fetchone()
+        cur.execute('DELETE FROM history WHERE oauth_token=? AND user=?',(oauth_token,name))
         return yesterday_data
 
     def player_today_data_import(self, oauth_token,today_data):
