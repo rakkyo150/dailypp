@@ -4,7 +4,7 @@ import os
 from flask import Flask, request, render_template, redirect, session
 from requests_oauthlib import OAuth1Session
 
-from player_info_db_handler import player_info_db_handler
+from player_db_handler import Player_db_handler
 
 app = Flask(__name__)
 # ちゃんと変更しました
@@ -81,12 +81,13 @@ def get_twitter_access_token():
     session["oauth_token"] = access_token["oauth_token"]
     session["oauth_token_secret"] = access_token["oauth_token_secret"]
 
-    player_info_db = player_info_db_handler()
-    player_info_db.player_info_insert(
+    player_db = Player_db_handler()
+    player_db.player_info_insert(
         session.pop("url",None),
         session.pop("oauth_token",None),
         session.pop("oauth_token_secret",None)
     )
+    player_db.player_db_connection_close()
 
     return render_template("index4.html")
 
