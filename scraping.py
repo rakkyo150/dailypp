@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class scraping:
+class Scraping:
     def __init__(self, link):
         global soup, soup_recent
         html_doc = requests.get(link).text
