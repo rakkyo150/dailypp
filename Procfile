@@ -1,1 +1,1 @@
-web: gunicorn get_player_info.py:app --log-file=-
+web: gunicorn get_player_info:app --log-file -
