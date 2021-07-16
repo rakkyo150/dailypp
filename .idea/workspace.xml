@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_player_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_player_info.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1626138532" />
+                    <option name="lastUsedInstant" value="1626416011" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -72,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/get_player_info.py" />
-    <property name="settings.editor.selected.configurable" value="file.status.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -87,6 +88,10 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
+        <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
+        <env name="session_key" value="x2iJWhYqout7rCoMKUv7O17LnDS7GvpUh6e2BOR84MnKXd7xNE2icHFnXW" />
+        <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -108,6 +113,10 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
+        <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
+        <env name="session_key" value="x2iJWhYqout7rCoMKUv7O17LnDS7GvpUh6e2BOR84MnKXd7xNE2icHFnXW" />
+        <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -242,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626255790144</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="requirements.txtを必要最低限に&#10;マージミスってるところ修正">
+      <created>1626418942927</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1626418942927</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -311,6 +327,7 @@
     <MESSAGE value="tweepy実装" />
     <MESSAGE value="結合を疎にした" />
     <MESSAGE value="クリーンアップ" />
-    <option name="LAST_COMMIT_MESSAGE" value="クリーンアップ" />
+    <MESSAGE value="requirements.txtを必要最低限に&#10;マージミスってるところ修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements.txtを必要最低限に&#10;マージミスってるところ修正" />
   </component>
 </project>
