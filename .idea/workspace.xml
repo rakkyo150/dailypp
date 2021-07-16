@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_player_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_player_info.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +80,7 @@
       <recent name="C:\Users\p8z68\PycharmProjects\daily_pp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.get_player_info">
     <configuration name="get_player_info" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="daily_pp" />
       <option name="INTERPRETER_OPTIONS" value="" />
