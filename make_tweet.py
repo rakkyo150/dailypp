@@ -99,7 +99,7 @@ def make_tweet(yesterday_data, today_data):
                     print("以下略")
                 else:
 
-                    if yesterday_data is None or yesterday_data[5] is None:
+                    if yesterday_data is None:
                         pass
                     else:
                         if today_data[4] != yesterday_data[4]:
@@ -107,6 +107,8 @@ def make_tweet(yesterday_data, today_data):
                         elif today_data[4] == yesterday_data[4] and today_data[5] > yesterday_data[5]:
                             topPPDiff = decimalCalculation(today_data[5], yesterday_data[5])
                             addText(f"！トップスコア更新！\nMAP:{today_data[4]}\npp:{today_data[5]}(前日比:+{topPPDiff})")
+                        else:
+                            pass
 
                     if ry(string_count):
                         print("以下略")
@@ -122,6 +124,7 @@ def make_tweet(yesterday_data, today_data):
                             addText(f"\n最新のスコア送信:{how_long_not_play_hour}時間{how_long_not_play_minute}分前")
 
     complete_tweet=tweet_sentence
+    # 複数Twitterアカウントの処理でループするため
     tweet_sentence=""
     string_count=0
 
