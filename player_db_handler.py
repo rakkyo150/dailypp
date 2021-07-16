@@ -80,7 +80,8 @@ class Player_db_handler:
         return cur.fetchall()
 
 
-    # yesterday_dataを取得して削除,スコアセイバーのアカウントの名前を変えた日は前日比は反映されない
+    # yesterday_dataを取得してからoauth_tokenが一致するデータを全削除
+    # スコアセイバーのアカウントの名前を変えた日は前日比は反映されない
     def player_yesterday_data_export(self, oauth_token, name):
         cur.execute(
             'SELECT date,pp,gRanking,lRanking,topSong,topPP '
