@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_tweet.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_tweet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_db_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626433117327</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="複数アカウントの場合のバグ修正">
+      <created>1626469132820</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1626469132820</updated>
+    </task>
+    <task id="LOCAL-00024" summary="バグ修正と細かな変更">
+      <created>1626471494389</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1626471494389</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -379,6 +393,7 @@
     <MESSAGE value="htmlのリンクを調整" />
     <MESSAGE value="htmlのリンク,Twitterのコールバックのリンクを調整" />
     <MESSAGE value="複数アカウントの場合のバグ修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="複数アカウントの場合のバグ修正" />
+    <MESSAGE value="バグ修正と細かな変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="バグ修正と細かな変更" />
   </component>
 </project>
