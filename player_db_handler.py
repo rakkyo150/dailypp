@@ -12,8 +12,8 @@ class Player_db_handler:
         cur = conn.cursor()
         cur.execute(
             'CREATE TABLE IF NOT EXISTS player_info('
-            'score_saber_url TEXT'
-            ',oauth_token TEXT ,'
+            'score_saber_url TEXT,'
+            'oauth_token TEXT,'
             'oauth_token_secret TEXT'
             ')'
         )
@@ -38,8 +38,9 @@ class Player_db_handler:
         oauth_tokens=cur.fetchall()
         # oauth_tokensはタプル型を格納しているリストなので、存否を確認したい値はタプル型で書いてやらないとダメ
         if (oauth_token,) in oauth_tokens:
-            cur.execute('UPDATE player_info SET score_saber_url=%s,oauth_token_secret=%s',
-                        (url, oauth_token_secret)
+            cur.execute('DELETE FROM player_info WHERE oauth_token=%s',(oauth_token,))
+            cur.execute('INSERT INTO player_info (score_saber_url,oauth_token,oauth_token_secret VALUES (%s,%s,%s)',
+                        (url, oauth_token ,oauth_token_secret)
                         )
         else:
             cur.execute(
