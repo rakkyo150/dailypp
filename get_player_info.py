@@ -82,7 +82,7 @@ def get_twitter_access_token():
     session["oauth_token_secret"] = access_token["oauth_token_secret"]
 
     player_info_db = Player_db_handler()
-    player_info_db.player_info_insert(
+    player_info_db.player_info_upsert(
         session["url"],
         session["oauth_token"],
         session["oauth_token_secret"]
