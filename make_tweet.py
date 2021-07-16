@@ -42,6 +42,7 @@ def addText(text):
 
 
 def make_tweet(yesterday_data, today_data):
+    global string_count,tweet_sentence
     addText(today_data[0])
 
     if ry(string_count):
@@ -120,4 +121,8 @@ def make_tweet(yesterday_data, today_data):
                             how_long_not_play_minute = int(how_long_not_play.total_seconds() % 3600 / 60)
                             addText(f"\n最新のスコア送信:{how_long_not_play_hour}時間{how_long_not_play_minute}分前")
 
-    return tweet_sentence
+    complete_tweet=tweet_sentence
+    tweet_sentence=""
+    string_count=0
+
+    return complete_tweet
