@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +74,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../postgreSQL_test" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RecentsManager">
@@ -303,7 +302,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626411064973</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整">
+      <created>1626411765732</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1626411765732</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Herokuのデプロイに必要なファイルを追加">
+      <created>1626413200492</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1626413200492</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -378,6 +391,7 @@
     <MESSAGE value="yesterday_dataを毎回消す処理" />
     <MESSAGE value="データベース整理&#10;１twitterアカウントにつき１登録に&#10;クラス名の頭文字を大文字に" />
     <MESSAGE value="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整" />
-    <option name="LAST_COMMIT_MESSAGE" value="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整" />
+    <MESSAGE value="Herokuのデプロイに必要なファイルを追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="Herokuのデプロイに必要なファイルを追加" />
   </component>
 </project>
