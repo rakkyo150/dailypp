@@ -1,5 +1,3 @@
-#不要なものもありますが大目に見てください
-
 beautifulsoup4==4.9.3
 Flask==1.1.2
 gunicorn==20.1.0
