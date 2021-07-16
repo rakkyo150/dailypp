@@ -122,6 +122,7 @@ def make_tweet(yesterday_data, today_data):
                             addText(f"\n最新のスコア送信:{how_long_not_play_hour}時間{how_long_not_play_minute}分前")
 
     complete_tweet=tweet_sentence
+    # 複数Twitterアカウントの処理でループするため
     tweet_sentence=""
     string_count=0
 
