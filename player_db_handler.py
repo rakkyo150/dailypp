@@ -2,7 +2,7 @@ import os
 import psycopg2
 
 
-# scoresaberのURLもここで格納されます。
+# スコアセイバーのURLもここで格納されます。
 class Player_db_handler:
     def __init__(self):
         global conn, cur
@@ -12,8 +12,8 @@ class Player_db_handler:
         cur = conn.cursor()
         cur.execute(
             'CREATE TABLE IF NOT EXISTS player_info('
-            'score_saber_url TEXT'
-            ',oauth_token TEXT ,'
+            'score_saber_url TEXT,'
+            'oauth_token TEXT,'
             'oauth_token_secret TEXT'
             ')'
         )
@@ -26,20 +26,22 @@ class Player_db_handler:
             'gRanking INTEGER,'
             'lRanking INTEGER,'
             'topSong TEXT,'
-            'topPP INTEGER,'
+            'topPP REAL,'
             'recent_play TEXT'
             ')'
         )
 
-    def player_info_insert(self, url, oauth_token, oauth_token_secret):
+    # oauth_tokenに被りがあったらupdate
+    def player_info_upsert(self, url, oauth_token, oauth_token_secret):
         # プレイスホルダーとupsertの共存の仕方が分からなかった…
         # なぜconstraintじゃなくてmergeにしなかったんや
         cur.execute('SELECT oauth_token FROM player_info')
         oauth_tokens=cur.fetchall()
         # oauth_tokensはタプル型を格納しているリストなので、存否を確認したい値はタプル型で書いてやらないとダメ
         if (oauth_token,) in oauth_tokens:
-            cur.execute('UPDATE player_info SET score_saber_url=%s,oauth_token_secret=%s',
-                        (url, oauth_token_secret)
+            cur.execute('DELETE FROM player_info WHERE oauth_token=%s',(oauth_token,))
+            cur.execute('INSERT INTO player_info (score_saber_url,oauth_token,oauth_token_secret) VALUES (%s,%s,%s)',
+                        (url, oauth_token ,oauth_token_secret)
                         )
         else:
             cur.execute(
@@ -72,10 +74,14 @@ class Player_db_handler:
             )
         )
 
+
     def player_info_export(self):
         cur.execute('SELECT * from player_info')
         return cur.fetchall()
 
+
+    # yesterday_dataを取得してからoauth_tokenが一致するデータを全削除
+    # スコアセイバーのアカウントの名前を変えた日は前日比は反映されない
     def player_yesterday_data_export(self, oauth_token, name):
         cur.execute(
             'SELECT date,pp,gRanking,lRanking,topSong,topPP '
@@ -83,12 +89,14 @@ class Player_db_handler:
             'WHERE oauth_token=%s AND player=%s', (oauth_token, name)
         )
         yesterday_data = cur.fetchone()
-        cur.execute('DELETE FROM player_history WHERE oauth_token=%s AND user=%s', (oauth_token, name))
+        cur.execute('DELETE FROM player_history WHERE oauth_token=%s', (oauth_token,))
         return yesterday_data
 
+    # Twitterの連携が切れたら
     def player_info_delete(self, oauth_token):
         cur.execute('DELETE FROM player_info WHERE oauth_token=%s', (oauth_token,))
 
+    # Twitterの連携が切れたら
     def player_history_delete(self, oauth_token):
         cur.execute('DELETE FROM player_history WHERE oauth_token=%s', (oauth_token,))
 

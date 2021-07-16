@@ -58,7 +58,7 @@ for url, token, token_secret in player_info_list:
 
         '''スクレイピング終了'''
 
-        # 名前が一致する昨日のデータ出力してから削除
+        # スコアセイバーの名前が一致する昨日のデータ出力してから削除
         yesterday_data = player_db.player_yesterday_data_export(token,today_data[0])
 
         # 最新のデータをデータベースに入力
