@@ -48,7 +48,8 @@ def make_tweet(yesterday_data, today_data):
         print("以下略")
     else:
 
-        if yesterday_data[1] == None:
+        # yesterday_data[1] is Noneとすると'NoneType' object is not subscriptableのエラーが出る
+        if yesterday_data is None:
             addText(f"pp:{today_data[1]}")
         else:
             if today_data[1] == yesterday_data[1]:
@@ -65,7 +66,7 @@ def make_tweet(yesterday_data, today_data):
             print("以下略")
         else:
 
-            if yesterday_data[2] == None:
+            if yesterday_data is None:
                 addText(f"GR:#{today_data[2]}")
             else:
                 if today_data[2] == yesterday_data[2]:
@@ -81,7 +82,7 @@ def make_tweet(yesterday_data, today_data):
                 print("以下略")
             else:
 
-                if yesterday_data[3] == None:
+                if yesterday_data is None:
                     addText(f"LR:#{today_data[3]}")
                 else:
                     if today_data[3] == yesterday_data[3]:
@@ -97,7 +98,7 @@ def make_tweet(yesterday_data, today_data):
                     print("以下略")
                 else:
 
-                    if yesterday_data[4] == None or yesterday_data[5] == None:
+                    if yesterday_data is None or yesterday_data[5] is None:
                         pass
                     else:
                         if today_data[4] != yesterday_data[4]:

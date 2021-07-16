@@ -1,20 +1,27 @@
-import sqlite3
+import os
+import psycopg2
 
 
 # scoresaberのURLもここで格納されます。
 class Player_db_handler:
     def __init__(self):
         global conn, cur
-        conn = sqlite3.connect("player.db")
+        # データベースのURLは環境変数に設定している
+        link=os.environ.get('DATABASE_URL')
+        conn = psycopg2.connect(link)
         cur = conn.cursor()
         cur.execute(
-            'CREATE TABLE IF NOT EXISTS player_info(score_saber_url TEXT,oauth_token TEXT PRIMARY KEY,oauth_token_secret TEXT)'
+            'CREATE TABLE IF NOT EXISTS player_info('
+            'score_saber_url TEXT'
+            ',oauth_token TEXT ,'
+            'oauth_token_secret TEXT'
+            ')'
         )
         cur.execute(
             'CREATE TABLE IF NOT EXISTS player_history('
             'oauth_token TEXT,'
             'date TEXT,'
-            'user TEXT,'
+            'player TEXT,'
             'pp REAL,'
             'gRanking INTEGER,'
             'lRanking INTEGER,'
@@ -25,14 +32,35 @@ class Player_db_handler:
         )
 
     def player_info_insert(self, url, oauth_token, oauth_token_secret):
-        cur.execute(
-            'REPLACE INTO player_info VALUES(?,?,?)',
-            (url, oauth_token, oauth_token_secret)
-        )
+        # プレイスホルダーとupsertの共存の仕方が分からなかった…
+        # なぜconstraintじゃなくてmergeにしなかったんや
+        cur.execute('SELECT oauth_token FROM player_info')
+        oauth_tokens=cur.fetchall()
+        # oauth_tokensはタプル型を格納しているリストなので、存否を確認したい値はタプル型で書いてやらないとダメ
+        if (oauth_token,) in oauth_tokens:
+            cur.execute('UPDATE player_info SET score_saber_url=%s,oauth_token_secret=%s',
+                        (url, oauth_token_secret)
+                        )
+        else:
+            cur.execute(
+                'INSERT INTO player_info VALUES (%s,%s,%s)',
+                (url, oauth_token, oauth_token_secret)
+            )
+
 
     def player_today_data_import(self, oauth_token, today_data):
         cur.execute(
-            'INSERT INTO player_history VALUES (?,datetime("now","localtime"),?,?,?,?,?,?,?)', (
+            'INSERT INTO player_history ('
+            'oauth_token,'
+            'date,'
+            'player,'
+            'pp,'
+            'gRanking,'
+            'lRanking,'
+            'topSong,'
+            'topPP,'
+            'recent_play'
+            ') VALUES (%s,CURRENT_TIME,%s,%s,%s,%s,%s,%s,%s)', (
                 oauth_token,
                 today_data[0],
                 today_data[1],
@@ -50,19 +78,19 @@ class Player_db_handler:
 
     def player_yesterday_data_export(self, oauth_token, name):
         cur.execute(
-            'SELECT max(date),pp,gRanking,lRanking,topSong,topPP '
+            'SELECT date,pp,gRanking,lRanking,topSong,topPP '
             'FROM player_history '
-            'WHERE oauth_token=? AND user=?', (oauth_token, name)
+            'WHERE oauth_token=%s AND player=%s', (oauth_token, name)
         )
         yesterday_data = cur.fetchone()
-        cur.execute('DELETE FROM player_history WHERE oauth_token=? AND user=?', (oauth_token, name))
+        cur.execute('DELETE FROM player_history WHERE oauth_token=%s AND user=%s', (oauth_token, name))
         return yesterday_data
 
     def player_info_delete(self, oauth_token):
-        cur.execute('DELETE FROM player_info WHERE oauth_token=?', (oauth_token,))
+        cur.execute('DELETE FROM player_info WHERE oauth_token=%s', (oauth_token,))
 
     def player_history_delete(self, oauth_token):
-        cur.execute('DELETE FROM player_history WHERE oauth_token=?', (oauth_token,))
+        cur.execute('DELETE FROM player_history WHERE oauth_token=%s', (oauth_token,))
 
     def player_db_connection_close(self):
         conn.commit()

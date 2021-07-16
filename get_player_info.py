@@ -53,8 +53,6 @@ def get_twitter_request_token():
 
     request_token.update({"authenticate_endpoint": authenticate_endpoint})
 
-    print(request_token)
-
     return redirect(request_token["authenticate_endpoint"])
 
 
