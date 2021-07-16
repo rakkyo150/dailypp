@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_db_handler.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,16 +43,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="release/adjust" />
-                    <option name="lastUsedInstant" value="1626426369" />
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1626429503" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1626425328" />
+                    <option name="lastUsedInstant" value="1626429379" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1626424995" />
+                    <option name="branchName" value="release/adjust" />
+                    <option name="lastUsedInstant" value="1626426369" />
                   </RecentBranch>
                 </list>
               </option>
@@ -82,7 +85,7 @@
       <recent name="C:\Users\p8z68\PycharmProjects\daily_pp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.get_player_info">
+  <component name="RunManager" selected="Python.main">
     <configuration name="get_player_info" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="daily_pp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -294,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626427203391</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="複数アカウントの場合のバグ修正">
+      <created>1626433117327</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1626433117327</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -368,6 +378,7 @@
     <MESSAGE value="requirements.txtを最小限に" />
     <MESSAGE value="htmlのリンクを調整" />
     <MESSAGE value="htmlのリンク,Twitterのコールバックのリンクを調整" />
-    <option name="LAST_COMMIT_MESSAGE" value="htmlのリンク,Twitterのコールバックのリンクを調整" />
+    <MESSAGE value="複数アカウントの場合のバグ修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="複数アカウントの場合のバグ修正" />
   </component>
 </project>
