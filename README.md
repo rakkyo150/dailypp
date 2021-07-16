@@ -1,0 +1,2 @@
+# dailypp
+スコアセイバーアカウントの情報を毎日投稿するTwitterのBot
