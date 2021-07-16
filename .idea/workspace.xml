@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
-    </list>
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -42,12 +40,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1626103408" />
+                    <option name="branchName" value="release/prepare_for_heroku_deploy" />
+                    <option name="lastUsedInstant" value="1626279842" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1626103363" />
+                    <option name="lastUsedInstant" value="1626138532" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1626103408" />
                   </RecentBranch>
                 </list>
               </option>
@@ -60,7 +62,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/secret.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1vCqpQJfcuiD4hYGBPmItgZcFnF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -72,49 +73,34 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../postgreSQL_test" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\p8z68\PycharmProjects\daily_pp\templates" />
       <recent name="C:\Users\p8z68\PycharmProjects\daily_pp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.get_tokens">
-    <configuration name="get_tokens" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="get_player_info" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="daily_pp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
+        <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
+        <env name="session_key" value="x2iJWhYqout7rCoMKUv70l7LnDS7GvpUh6e2BO7tOR84MnKXd7xNE2icHFnXW" />
+        <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_tokens.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lambda_function" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="daily_pp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lambda_function.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_player_info.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,6 +115,10 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
+        <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
+        <env name="session_key" value="x2iJWhYqout7rCoMKUv70l7LnDS7GvpUh6e2BO7tOR84MnKXd7xNE2icHFnXW" />
+        <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -145,9 +135,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.lambda_function" />
+      <item itemvalue="Python.get_player_info" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.get_tokens" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -194,7 +183,140 @@
       <option name="project" value="LOCAL" />
       <updated>1626137898716</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="セッション実装前">
+      <created>1626138111616</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626138111616</updated>
+    </task>
+    <task id="LOCAL-00007" summary="セッション実装">
+      <created>1626140270524</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626140270524</updated>
+    </task>
+    <task id="LOCAL-00008" summary="セッション(仮)とBootstrap">
+      <created>1626141335302</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626141335302</updated>
+    </task>
+    <task id="LOCAL-00009" summary="HTMLとJS">
+      <created>1626144556823</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626144556823</updated>
+    </task>
+    <task id="LOCAL-00010" summary="プレイヤーインフォの完成とHTMLの完成">
+      <created>1626226238907</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626226238907</updated>
+    </task>
+    <task id="LOCAL-00011" summary="プレイヤーインフォの完成とHTMLの完成">
+      <created>1626226340369</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626226340369</updated>
+    </task>
+    <task id="LOCAL-00012" summary="tweepy実装">
+      <created>1626248282156</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1626248282156</updated>
+    </task>
+    <task id="LOCAL-00013" summary="結合を疎にした">
+      <created>1626255398293</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626255398293</updated>
+    </task>
+    <task id="LOCAL-00014" summary="結合を疎にした">
+      <created>1626255425718</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626255425718</updated>
+    </task>
+    <task id="LOCAL-00015" summary="クリーンアップ">
+      <created>1626255790144</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1626255790144</updated>
+    </task>
+    <task id="LOCAL-00016" summary="セッションの最適化とセッションキーを変更・隠匿">
+      <created>1626279722617</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1626279722617</updated>
+    </task>
+    <task id="LOCAL-00017" summary="バグの修正とシークレットキーを環境変数へ設定">
+      <created>1626284189301</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1626284189301</updated>
+    </task>
+    <task id="LOCAL-00018" summary="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了">
+      <created>1626293456026</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1626293456026</updated>
+    </task>
+    <task id="LOCAL-00019" summary="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了">
+      <created>1626296184708</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1626296184708</updated>
+    </task>
+    <task id="LOCAL-00020" summary="データベース整理">
+      <created>1626312701652</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1626312701652</updated>
+    </task>
+    <task id="LOCAL-00021" summary="データベース整理&#10;１twitterアカウントにつき１登録に&#10;クラス名最初大文字に">
+      <created>1626360182308</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1626360182308</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整">
+      <created>1626411064973</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1626411064973</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整">
+      <created>1626411765732</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1626411765732</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Herokuのデプロイに必要なファイルを追加">
+      <created>1626413200492</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1626413200492</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -210,11 +332,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="44c0b7a8-5134-4f34-b222-b51b88b6537a">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="44c0b7a8-5134-4f34-b222-b51b88b6537a" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -226,6 +378,20 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Serveless settings" />
     <MESSAGE value="セッション実装前" />
-    <option name="LAST_COMMIT_MESSAGE" value="セッション実装前" />
+    <MESSAGE value="セッション実装(仮)" />
+    <MESSAGE value="Bootstrap導入" />
+    <MESSAGE value="HTMLとJS" />
+    <MESSAGE value="プレイヤーインフォの完成とHTMLの完成" />
+    <MESSAGE value="tweepy実装" />
+    <MESSAGE value="結合を疎にした" />
+    <MESSAGE value="クリーンアップ" />
+    <MESSAGE value="セッションの最適化とセッションキーを変更・隠匿" />
+    <MESSAGE value="バグの修正とシークレットキーを環境変数へ設定" />
+    <MESSAGE value="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了" />
+    <MESSAGE value="yesterday_dataを毎回消す処理" />
+    <MESSAGE value="データベース整理&#10;１twitterアカウントにつき１登録に&#10;クラス名の頭文字を大文字に" />
+    <MESSAGE value="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整" />
+    <MESSAGE value="Herokuのデプロイに必要なファイルを追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="Herokuのデプロイに必要なファイルを追加" />
   </component>
 </project>
