@@ -17,16 +17,13 @@ player_info_list = player_db.player_info_export()
 # 登録人数分繰り返し
 for url, token, token_secret in player_info_list:
     scoreSaber_link = "https://scoresaber.com/u/" + url
-    print(token)
 
     # 連携が切れたならデータベースのデータを削除
     twitter_handler_api=Twitter_handler(token,token_secret)
     if twitter_handler_api.verify_credentials() is False:
-        print("false")
         player_db.player_info_delete(token)
         player_db.player_history_delete(token)
     else:
-        print("true")
 
         '''スクレイピング開始'''
 
@@ -57,7 +54,6 @@ for url, token, token_secret in player_info_list:
         # 最新のスコア送信のスクレイピング
         today_data.append(scraping.recent_play_UTC())
 
-        print(today_data)
 
         '''スクレイピング終了'''
 
