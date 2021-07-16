@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="データベース整理">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_player_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_player_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_history_db_handler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_info_db_handler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/twitter_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +75,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/get_player_info.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../postgreSQL_test" />
     <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RecentsManager">
@@ -101,6 +94,7 @@
         <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
         <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
         <env name="session_key" value="x2iJWhYqout7rCoMKUv70l7LnDS7GvpUh6e2BO7tOR84MnKXd7xNE2icHFnXW" />
+        <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -125,6 +119,7 @@
         <env name="consumer_key" value="z4RahtYBJl2E0jD2ZHRmokjhF" />
         <env name="consumer_secret" value="HZ2SzuzaFzlzzSzps9xSj9XqY7kB6C3ZcBMEEQnfNNiF2ndWau" />
         <env name="session_key" value="x2iJWhYqout7rCoMKUv70l7LnDS7GvpUh6e2BO7tOR84MnKXd7xNE2icHFnXW" />
+        <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -294,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626312701652</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="データベース整理&#10;１twitterアカウントにつき１登録に&#10;クラス名最初大文字に">
+      <created>1626360182308</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1626360182308</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整">
+      <created>1626411064973</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1626411064973</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -366,7 +375,9 @@
     <MESSAGE value="セッションの最適化とセッションキーを変更・隠匿" />
     <MESSAGE value="バグの修正とシークレットキーを環境変数へ設定" />
     <MESSAGE value="スコアセイバーとtwitterのアカウントの区別&#10;データベースでrecent_playを追加する修正&#10;Twitter連携が切れたときにツイート作成をせずデータベースのデータを削除して終了" />
-    <MESSAGE value="データベース整理" />
-    <option name="LAST_COMMIT_MESSAGE" value="データベース整理" />
+    <MESSAGE value="yesterday_dataを毎回消す処理" />
+    <MESSAGE value="データベース整理&#10;１twitterアカウントにつき１登録に&#10;クラス名の頭文字を大文字に" />
+    <MESSAGE value="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整" />
+    <option name="LAST_COMMIT_MESSAGE" value="ログ消してsqliteをpostgreSQLに変更&#10;あとyesterday_dataがnullのときifの条件式でエラーが出るようになったのでそこの調整" />
   </component>
 </project>
