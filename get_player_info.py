@@ -37,7 +37,7 @@ def register_execute():
 @app.route('/twitter/request_token', methods=['GET'])
 def get_twitter_request_token():
     # Twitter Application Managementで設定したURLを使う
-    oauth_callback = request.args.get('http://127.0.0.1:50000/callback/twitter.html')
+    oauth_callback = request.args.get('https://dailypp.herokuapp.com/callback/twitter.html')
 
     twitter = OAuth1Session(os.environ["consumer_key"], os.environ["consumer_secret"])
 
