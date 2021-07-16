@@ -1,14 +1,14 @@
 from urllib.parse import parse_qsl
+import os
 
 from flask import Flask, request, render_template, redirect, session
 from requests_oauthlib import OAuth1Session
 
-import secret
-from player_info_db_handler import player_info_db_handler
+from player_db_handler import Player_db_handler
 
 app = Flask(__name__)
 # ちゃんと変更しました
-app.secret_key = secret.session_key
+app.secret_key = os.environ["session_key"]
 
 base_url = "https://api.twitter.com/"
 
@@ -39,7 +39,7 @@ def get_twitter_request_token():
     # Twitter Application Managementで設定したURLを使う
     oauth_callback = request.args.get('http://127.0.0.1:50000/callback/twitter.html')
 
-    twitter = OAuth1Session(secret.consumer_key, secret.consumer_secret)
+    twitter = OAuth1Session(os.environ["consumer_key"], os.environ["consumer_secret"])
 
     response = twitter.post(
         request_token_url,
@@ -65,8 +65,8 @@ def get_twitter_access_token():
     oauth_verifier = request.args.get("oauth_verifier")
 
     twitter = OAuth1Session(
-        secret.consumer_key,
-        secret.consumer_secret,
+        os.environ["consumer_key"],
+        os.environ["consumer_secret"],
         oauth_token,
         oauth_verifier,
     )
@@ -81,12 +81,13 @@ def get_twitter_access_token():
     session["oauth_token"] = access_token["oauth_token"]
     session["oauth_token_secret"] = access_token["oauth_token_secret"]
 
-    player_info_db = player_info_db_handler()
+    player_info_db = Player_db_handler()
     player_info_db.player_info_insert(
         session["url"],
         session["oauth_token"],
         session["oauth_token_secret"]
     )
+    player_info_db.player_db_connection_close()
 
     return render_template("index4.html")
 
