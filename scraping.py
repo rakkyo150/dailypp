@@ -45,8 +45,10 @@ class Scraping:
         topPP_tag = soup.find("span", class_="scoreTop ppValue")
         return float(topPP_tag.string)
 
-    def recent_play_UTC(self):
+    def recent_play_JST(self):
         recent_song = soup_recent.find("span", class_="songBottom time")
         recent_play_UTC_str = recent_song.get("title")
         recent_play_UTC_str = recent_play_UTC_str.replace(" UTC", "")
-        return datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
+        recent_play_UTC = datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
+        recent_play_JST = recent_play_UTC + datetime.timedelta(hours=9)
+        return recent_play_JST

@@ -41,7 +41,7 @@ def addText(text):
         tweet_sentence += text + "\n"
 
 
-def make_tweet(yesterday_data, today_data):
+def make_tweet(yesterday_data, today_data, now_JST):
     global string_count,tweet_sentence
     addText(today_data[0])
 
@@ -114,7 +114,7 @@ def make_tweet(yesterday_data, today_data):
                         print("以下略")
                     else:
 
-                        how_long_not_play = datetime.now().replace(microsecond=0) - today_data[6]
+                        how_long_not_play = now_JST.replace(microsecond=0) - today_data[6]
                         if how_long_not_play.days >= 1:
                             how_long_not_play = how_long_not_play.days
                             addText(f"\n最新のスコア送信:{how_long_not_play}日前")
