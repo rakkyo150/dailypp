@@ -50,7 +50,7 @@ class Player_db_handler:
             )
 
 
-    def player_today_data_import(self, oauth_token, today_data):
+    def player_today_data_import(self, oauth_token, now_JST ,today_data):
         cur.execute(
             'INSERT INTO player_history ('
             'oauth_token,'
@@ -62,8 +62,9 @@ class Player_db_handler:
             'topSong,'
             'topPP,'
             'recent_play'
-            ') VALUES (%s,CURRENT_TIME,%s,%s,%s,%s,%s,%s,%s)', (
+            ') VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
                 oauth_token,
+                now_JST,
                 today_data[0],
                 today_data[1],
                 today_data[2],
@@ -82,12 +83,13 @@ class Player_db_handler:
 
     # yesterday_dataを取得してからoauth_tokenが一致するデータを全削除
     # スコアセイバーのアカウントの名前を変えた日は前日比は反映されない
-    def player_yesterday_data_export(self, oauth_token, name):
+    def player_yesterday_data_export(self, oauth_token, player):
         cur.execute(
-            'SELECT date,pp,gRanking,lRanking,topSong,topPP '
+            'SELECT player,pp,gRanking,lRanking,topSong,topPP '
             'FROM player_history '
-            'WHERE oauth_token=%s AND player=%s', (oauth_token, name)
+            'WHERE oauth_token=%s AND player=%s', (oauth_token, player)
         )
+        # oauth_tokenとnow_JSTはセレクトしていないのでyesterday_dataはtoday_dataと同じ構成
         yesterday_data = cur.fetchone()
         cur.execute('DELETE FROM player_history WHERE oauth_token=%s', (oauth_token,))
         return yesterday_data
