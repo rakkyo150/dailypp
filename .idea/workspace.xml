@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
     </list>
     <list id="4acdca4e-4566-4ec8-b60d-83695c23d0c0" name="Revert &quot;タグ付け&quot;" comment="Revert &quot;タグ付け&quot;&#10;&#10;This reverts commit c3c877d8" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +19,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="develop" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -44,20 +57,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="hotfix/add_sleep" />
-                    <option name="lastUsedInstant" value="1626500900" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1626429503" />
+                    <option name="lastUsedInstant" value="1626501650" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1626429379" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="release/adjust" />
-                    <option name="lastUsedInstant" value="1626426369" />
+                    <option name="lastUsedInstant" value="1626501408" />
                   </RecentBranch>
                 </list>
               </option>
@@ -82,6 +87,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/get_player_info.py" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -351,7 +357,42 @@
       <option name="project" value="LOCAL" />
       <updated>1626500772821</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="スクレイピング前にtime.sleep(1)追加">
+      <created>1626501065681</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1626501065681</updated>
+    </task>
+    <task id="LOCAL-00030" summary="スクレイピング前にtime.sleep(1)追加">
+      <created>1626501250633</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1626501250633</updated>
+    </task>
+    <task id="LOCAL-00031" summary="スクレイピング後にtime.sleep(1)追加">
+      <created>1626501328618</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1626501328618</updated>
+    </task>
+    <task id="LOCAL-00032" summary="コードを少しだけ読みやすくしました">
+      <created>1626557620721</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1626557620721</updated>
+    </task>
+    <task id="LOCAL-00033" summary="コードを少しだけ読みやすくしました&#10;タイムゾーンを日本標準時にしました">
+      <created>1626560455844</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1626560455844</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -430,6 +471,10 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="index3.htmlで新規タブを開くように" />
     <MESSAGE value="タグ付け" />
-    <option name="LAST_COMMIT_MESSAGE" value="タグ付け" />
+    <MESSAGE value="スクレイピング前にtime.sleep(1)追加" />
+    <MESSAGE value="スクレイピング後にtime.sleep(1)追加" />
+    <MESSAGE value="コードを少しだけ読みやすくしました" />
+    <MESSAGE value="コードを少しだけ読みやすくしました&#10;タイムゾーンを日本標準時にしました" />
+    <option name="LAST_COMMIT_MESSAGE" value="コードを少しだけ読みやすくしました&#10;タイムゾーンを日本標準時にしました" />
   </component>
 </project>

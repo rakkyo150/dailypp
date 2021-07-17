@@ -16,15 +16,15 @@ player_db = Player_db_handler()
 player_info_list = player_db.player_info_export()
 
 # 登録人数分繰り返し
-for url, token, token_secret in player_info_list:
+for url, oauth_token, oauth_token_secret in player_info_list:
     scoreSaber_link = "https://scoresaber.com/u/" + url
-    print(token,token_secret)
+    print(oauth_token,oauth_token_secret)
 
     # 連携が切れたならデータベースのデータを削除
-    twitter_handler_api=Twitter_handler(token,token_secret)
+    twitter_handler_api=Twitter_handler(oauth_token,oauth_token_secret)
     if twitter_handler_api.verify_credentials() is False:
-        player_db.player_info_delete(token)
-        player_db.player_history_delete(token)
+        player_db.player_info_delete(oauth_token)
+        player_db.player_history_delete(oauth_token)
     else:
 
         '''スクレイピング開始'''
@@ -35,7 +35,7 @@ for url, token, token_secret in player_info_list:
         # 0=name,1=pp,2=global_ranking,3=local_ranking,4=topSong,5=tpoPP,6=recent_play_UTC
         today_data = []
 
-        # 名前のスクレイピング
+        # スコアセイバーの名前(player)のスクレイピング
         today_data.append(scraping.name())
 
         # PPのスクレイピング
@@ -54,7 +54,7 @@ for url, token, token_secret in player_info_list:
         today_data.append(scraping.topPP())
 
         # 最新のスコア送信のスクレイピング
-        today_data.append(scraping.recent_play_UTC())
+        today_data.append(scraping.recent_play_JST())
 
         print("スクレイピング終了。1秒待つ。")
         time.sleep(1)
@@ -62,15 +62,19 @@ for url, token, token_secret in player_info_list:
         '''スクレイピング終了'''
 
         # スコアセイバーの名前が一致する昨日のデータ出力してから削除
-        yesterday_data = player_db.player_yesterday_data_export(token,today_data[0])
+        yesterday_data = player_db.player_yesterday_data_export(oauth_token, today_data[0])
+
+        # 現在時刻は日本標準時を使う
+        JST = datetime.timezone(datetime.timedelta(hours=+9), 'JST')
+        now_JST = datetime.now(JST)
 
         # 最新のデータをデータベースに入力
-        player_db.player_today_data_import(token,today_data)
+        player_db.player_today_data_import(oauth_token, now_JST, today_data)
 
-        how_long_not_play = datetime.now().replace(microsecond=0) - today_data[6]
+        how_long_not_play = now_JST.replace(microsecond=0) - today_data[6]
 
         # ツイート作成
-        tweet_sentence = make_tweet(yesterday_data, today_data)
+        tweet_sentence = make_tweet(yesterday_data, today_data, now_JST)
 
         # ツイート
         twitter_handler_api.send_tweet(tweet_sentence)
