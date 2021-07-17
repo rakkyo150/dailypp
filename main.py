@@ -1,4 +1,5 @@
 from datetime import datetime
+import time
 
 from make_tweet import make_tweet
 from twitter_handler import Twitter_handler
@@ -55,6 +56,8 @@ for url, token, token_secret in player_info_list:
         # 最新のスコア送信のスクレイピング
         today_data.append(scraping.recent_play_UTC())
 
+        print("スクレイピング終了。1秒待つ。")
+        time.sleep(1)
 
         '''スクレイピング終了'''
 
