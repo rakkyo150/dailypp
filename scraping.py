@@ -1,5 +1,5 @@
 import re
-from datetime import datetime
+import datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -49,6 +49,6 @@ class Scraping:
         recent_song = soup_recent.find("span", class_="songBottom time")
         recent_play_UTC_str = recent_song.get("title")
         recent_play_UTC_str = recent_play_UTC_str.replace(" UTC", "")
-        recent_play_UTC = datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
+        recent_play_UTC = datetime.datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
         recent_play_JST = recent_play_UTC + datetime.timedelta(hours=9)
         return recent_play_JST
