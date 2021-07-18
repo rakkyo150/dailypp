@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
-    </list>
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
     <list id="4acdca4e-4566-4ec8-b60d-83695c23d0c0" name="Revert &quot;タグ付け&quot;" comment="Revert &quot;タグ付け&quot;&#10;&#10;This reverts commit c3c877d8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1626501650" />
+                    <option name="lastUsedInstant" value="1626617569" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -86,7 +84,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/get_player_info.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -392,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626560455844</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="datetimeがおかしかったのを修正">
+      <created>1626617512019</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1626617512019</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -475,6 +480,7 @@
     <MESSAGE value="スクレイピング後にtime.sleep(1)追加" />
     <MESSAGE value="コードを少しだけ読みやすくしました" />
     <MESSAGE value="コードを少しだけ読みやすくしました&#10;タイムゾーンを日本標準時にしました" />
-    <option name="LAST_COMMIT_MESSAGE" value="コードを少しだけ読みやすくしました&#10;タイムゾーンを日本標準時にしました" />
+    <MESSAGE value="datetimeがおかしかったのを修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="datetimeがおかしかったのを修正" />
   </component>
 </project>

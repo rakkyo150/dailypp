@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime as dt
 import time
 
 from make_tweet import make_tweet
@@ -65,8 +65,8 @@ for url, oauth_token, oauth_token_secret in player_info_list:
         yesterday_data = player_db.player_yesterday_data_export(oauth_token, today_data[0])
 
         # 現在時刻は日本標準時を使う
-        JST = datetime.timezone(datetime.timedelta(hours=+9), 'JST')
-        now_JST = datetime.now(JST)
+        JST = dt.timezone(dt.timedelta(hours=+9), 'JST')
+        now_JST = dt.datetime.now(JST)
 
         # 最新のデータをデータベースに入力
         player_db.player_today_data_import(oauth_token, now_JST, today_data)
