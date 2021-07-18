@@ -1,5 +1,5 @@
 import re
-import datetime
+import datetime as dt
 
 import requests
 from bs4 import BeautifulSoup
@@ -46,9 +46,11 @@ class Scraping:
         return float(topPP_tag.string)
 
     def recent_play_JST(self):
+        JST = dt.timezone(dt.timedelta(hours=+9), 'JST')
+
         recent_song = soup_recent.find("span", class_="songBottom time")
         recent_play_UTC_str = recent_song.get("title")
         recent_play_UTC_str = recent_play_UTC_str.replace(" UTC", "")
-        recent_play_UTC = datetime.datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
-        recent_play_JST = recent_play_UTC + datetime.timedelta(hours=9)
+        recent_play_UTC = dt.datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
+        recent_play_JST = recent_play_UTC.astimezone(JST)
         return recent_play_JST

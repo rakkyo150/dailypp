@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
+    </list>
     <list id="4acdca4e-4566-4ec8-b60d-83695c23d0c0" name="Revert &quot;タグ付け&quot;" comment="Revert &quot;タグ付け&quot;&#10;&#10;This reverts commit c3c877d8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626621401215</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="datetimeがおかしいの修正２">
+      <created>1626621812008</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1626621812008</updated>
+    </task>
+    <task id="LOCAL-00038" summary="datetimeがおかしいの修正３">
+      <created>1626622584135</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1626622584135</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -470,7 +487,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Serveless settings" />
     <MESSAGE value="セッション実装前" />
     <MESSAGE value="セッション実装(仮)" />
     <MESSAGE value="Bootstrap導入" />
@@ -495,6 +511,7 @@
     <MESSAGE value="コードを少しだけ読みやすくしました&#10;タイムゾーンを日本標準時にしました" />
     <MESSAGE value="datetimeがおかしかったのを修正" />
     <MESSAGE value="datetimeがおかしいの修正２" />
-    <option name="LAST_COMMIT_MESSAGE" value="datetimeがおかしいの修正２" />
+    <MESSAGE value="datetimeがおかしいの修正３" />
+    <option name="LAST_COMMIT_MESSAGE" value="datetimeがおかしいの修正３" />
   </component>
 </project>
