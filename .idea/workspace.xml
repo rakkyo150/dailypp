@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_db_handler.py" afterDir="false" />
-    </list>
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
     <list id="4acdca4e-4566-4ec8-b60d-83695c23d0c0" name="Revert &quot;タグ付け&quot;" comment="Revert &quot;タグ付け&quot;&#10;&#10;This reverts commit c3c877d8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,7 +432,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626623337826</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="player_info_upsertのところの無駄な処理を削除">
+      <created>1626816904607</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1626816904607</updated>
+    </task>
+    <task id="LOCAL-00041" summary="player_info_upsertの処理を最適化">
+      <created>1626817175613</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1626817175613</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -494,8 +505,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="セッション実装前" />
-    <MESSAGE value="セッション実装(仮)" />
     <MESSAGE value="Bootstrap導入" />
     <MESSAGE value="HTMLとJS" />
     <MESSAGE value="プレイヤーインフォの完成とHTMLの完成" />
@@ -519,6 +528,8 @@
     <MESSAGE value="datetimeがおかしかったのを修正" />
     <MESSAGE value="datetimeがおかしいの修正２" />
     <MESSAGE value="datetimeがおかしいの修正３" />
-    <option name="LAST_COMMIT_MESSAGE" value="datetimeがおかしいの修正３" />
+    <MESSAGE value="player_info_upsertのところの無駄な処理を削除" />
+    <MESSAGE value="player_info_upsertの処理を最適化" />
+    <option name="LAST_COMMIT_MESSAGE" value="player_info_upsertの処理を最適化" />
   </component>
 </project>
