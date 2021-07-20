@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="" />
+    <list default="true" id="c8536c32-7b7d-4787-be18-0f7162f220e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_db_handler.py" afterDir="false" />
+    </list>
     <list id="4acdca4e-4566-4ec8-b60d-83695c23d0c0" name="Revert &quot;タグ付け&quot;" comment="Revert &quot;タグ付け&quot;&#10;&#10;This reverts commit c3c877d8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1626617569" />
+                    <option name="lastUsedInstant" value="1626623618" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -94,7 +97,7 @@
       <recent name="C:\Users\p8z68\PycharmProjects\daily_pp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.get_player_info">
     <configuration name="get_player_info" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="daily_pp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,7 +109,7 @@
         <env name="session_key" value="x2iJWhYqout7rCoMKUv7O17LnDS7GvpUh6e2BOR84MnKXd7xNE2icHFnXW" />
         <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\daily_pp\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -131,7 +134,7 @@
         <env name="session_key" value="x2iJWhYqout7rCoMKUv7O17LnDS7GvpUh6e2BOR84MnKXd7xNE2icHFnXW" />
         <env name="DATABASE_URL" value="postgresql://localhost:5432/postgres?user=postgres&amp;password=syougisan123" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\basic\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\p8z68\anaconda3\envs\daily_pp\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />

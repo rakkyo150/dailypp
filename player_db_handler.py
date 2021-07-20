@@ -33,21 +33,11 @@ class Player_db_handler:
 
     # oauth_tokenに被りがあったらupdate
     def player_info_upsert(self, url, oauth_token, oauth_token_secret):
-        # プレイスホルダーとupsertの共存の仕方が分からなかった…
-        # なぜconstraintじゃなくてmergeにしなかったんや
-        cur.execute('SELECT oauth_token FROM player_info')
-        oauth_tokens=cur.fetchall()
-        # oauth_tokensはタプル型を格納しているリストなので、存否を確認したい値はタプル型で書いてやらないとダメ
-        if (oauth_token,) in oauth_tokens:
-            cur.execute('DELETE FROM player_info WHERE oauth_token=%s',(oauth_token,))
-            cur.execute('INSERT INTO player_info (score_saber_url,oauth_token,oauth_token_secret) VALUES (%s,%s,%s)',
-                        (url, oauth_token ,oauth_token_secret)
-                        )
-        else:
-            cur.execute(
-                'INSERT INTO player_info VALUES (%s,%s,%s)',
-                (url, oauth_token, oauth_token_secret)
-            )
+        cur.execute('DELETE FROM player_info WHERE oauth_token=%s',(oauth_token,))
+        cur.execute(
+            'INSERT INTO player_info VALUES (%s,%s,%s)',
+            (url, oauth_token, oauth_token_secret)
+        )
 
 
     def player_today_data_import(self, oauth_token, now_JST ,today_data):
