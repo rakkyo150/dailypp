@@ -47,10 +47,12 @@ class Scraping:
 
     def recent_play_JST(self):
         JST = dt.timezone(dt.timedelta(hours=+9), 'JST')
+        UTC=dt.timezone(dt.timedelta(hours=0),'UTC')
 
         recent_song = soup_recent.find("span", class_="songBottom time")
         recent_play_UTC_str = recent_song.get("title")
         recent_play_UTC_str = recent_play_UTC_str.replace(" UTC", "")
-        recent_play_UTC = dt.datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S")
+        # tzinfoの付与忘れないこと
+        recent_play_UTC = dt.datetime.strptime(recent_play_UTC_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=UTC)
         recent_play_JST = recent_play_UTC.astimezone(JST)
         return recent_play_JST
